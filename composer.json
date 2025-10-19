@@ -1,0 +1,21 @@
+{
+    "name": "kanxpack/httpapi",
+    "description": "You can use HTTP APIs to send requests to any routable HTTP endpoint.",
+    "type": "library",
+    "require": {
+        "kanxpack/httpclient": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kanxpack\\HttpAPI\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marco Monteiro",
+            "email": "kanxuk@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

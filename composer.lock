@@ -1,0 +1,94 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "fe43dd8a927db93ce78547a36eee0c1f",
+    "packages": [
+        {
+            "name": "kanxpack/curlget",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kanxpack/CurlGet.git",
+                "reference": "dba1a4c221722ba2058cee089be20bb28be0e841"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kanxpack/CurlGet/zipball/dba1a4c221722ba2058cee089be20bb28be0e841",
+                "reference": "dba1a4c221722ba2058cee089be20bb28be0e841",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kanxpack\\CurlGet\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Monteiro"
+                }
+            ],
+            "description": "Simple PHP cUrl Get API",
+            "support": {
+                "issues": "https://github.com/Kanxpack/CurlGet/issues",
+                "source": "https://github.com/Kanxpack/CurlGet/tree/v1.0.1"
+            },
+            "time": "2025-10-17T20:48:56+00:00"
+        },
+        {
+            "name": "kanxpack/httpclient",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kanxpack/HttpClient.git",
+                "reference": "2e9e85b0325e995973335e512f5d9fc326aa58eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kanxpack/HttpClient/zipball/2e9e85b0325e995973335e512f5d9fc326aa58eb",
+                "reference": "2e9e85b0325e995973335e512f5d9fc326aa58eb",
+                "shasum": ""
+            },
+            "require": {
+                "kanxpack/curlget": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kanxpack\\HttpClient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Monteiro"
+                }
+            ],
+            "description": "Provides a class for sending HTTP requests and receiving HTTP responses from a resource identified by a URI in PHP.",
+            "support": {
+                "issues": "https://github.com/Kanxpack/HttpClient/issues",
+                "source": "https://github.com/Kanxpack/HttpClient/tree/v1.0.1"
+            },
+            "time": "2025-10-19T19:37:04+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
