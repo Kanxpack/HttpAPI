@@ -47,7 +47,7 @@ class HttpAPI {
 
     public static function getResult() : array
     {
-        return isset(self::getHttpClient()->getHttpResponseMessage()->getResponse()['result']) ? self::getHttpClient()->getHttpResponseMessage()->getResponse()['result'] : "";
+        return isset(self::getHttpClient()->getHttpResponseMessage()->getResponse()['result']) ? self::getHttpClient()->getHttpResponseMessage()->getResponse()['result'] : [];
     }
 
     public static function getStatus() : string
@@ -58,6 +58,32 @@ class HttpAPI {
     public static function isStatus200() : bool
     {
         if (self::getStatus() == '200') {
+            return true;
+        }
+        return false;
+    }
+
+    public static function isStatus404() : bool
+    {
+        if (self::getStatus() == '404') {
+            return true;
+        }
+        return false;
+    }
+
+    public static function isStatusSuccess() : bool
+    {
+        return self::isStatus200();
+    }
+
+    public static function isStatusNotFound() : bool
+    {
+        return self::isStatus404();
+    }
+
+    public static function isStatus(string $status) : bool
+    {
+        if (self::getStatus() == $status) {
             return true;
         }
         return false;
