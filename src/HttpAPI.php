@@ -7,13 +7,13 @@ use Kanxpack\HttpClient\HttpResponseMessage;
 
 class HttpAPI {
 
-	private static $instance;
-	protected static $httpResponseMessage;
+    private static $instance;
+    protected static $httpResponseMessage;
     protected static $httpClient;
     
     public static function getInstance() : self
     { 
-    	return empty(self::$instance) ? (new self()) : self::$instance; 
+        return empty(self::$instance) ? (new self()) : self::$instance; 
     }
 
     protected static function setHttpResponseMessage(\Kanxpack\HttpClient\HttpResponseMessage $httpResponseMessage) : self
@@ -38,21 +38,26 @@ class HttpAPI {
         return self::$httpClient;
     }
 
-	public static function get(string $url) : self
-	{
+    public static function get(string $url) : self
+    {
         self::setHttpClient(HttpClient::get($url));
         self::setHttpResponseMessage(self::getHttpClient()->getHttpResponseMessage());
-		return self::getInstance();
-	}
+        return self::getInstance();
+    }
 
     public static function getResult() : array
     {
-        return isset(self::getHttpClient()->getHttpResponseMessage()->getResponse()['result']) ? self::getHttpClient()->getHttpResponseMessage()->getResponse()['result'] : [];
+        return self::getHttpClient()->getHttpResponseMessage()->getResult();
+    }
+
+    public static function getError() : string
+    {
+        return self::getHttpClient()->getHttpResponseMessage()->getError();
     }
 
     public static function getStatus() : string
     {
-        return isset(self::getHttpClient()->getHttpResponseMessage()->getResponse()['status']) ? self::getHttpClient()->getHttpResponseMessage()->getResponse()['status'] : "404";
+        return isset(self::getHttpClient()->getHttpResponseMessage()->getStatus();
     }
 
     public static function isStatus200() : bool
