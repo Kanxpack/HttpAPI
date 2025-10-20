@@ -57,7 +57,7 @@ class HttpAPI {
 
     public static function getStatus() : string
     {
-        return isset(self::getHttpClient()->getHttpResponseMessage()->getStatus();
+        return self::getHttpClient()->getHttpResponseMessage()->getStatus();
     }
 
     public static function isStatus200() : bool
